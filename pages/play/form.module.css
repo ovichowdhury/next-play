@@ -1,0 +1,53 @@
+
+
+.formContainer {
+    width: 80%;
+    margin: auto;
+}
+
+
+.form {
+    background-color: #f4f4f4;
+    margin: 10px 0px;
+}
+
+.form label {
+    display: block;
+    padding: 5px;
+}
+
+.form input[type="text"] {
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.formGroup {
+    width: 80%;
+    margin: auto;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+.button:active {
+    background-color: green;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
