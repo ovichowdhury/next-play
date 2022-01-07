@@ -1,0 +1,25 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container div {
+    border: 1px solid #747474;
+    border-radius: 5px;
+
+}
+
+.containerItem {
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 30%;
+}
+
+@media(max-width: 480px) {
+    .container {
+        display: block;
+    }
+}
