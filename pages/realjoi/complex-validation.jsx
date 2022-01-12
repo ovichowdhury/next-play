@@ -49,10 +49,13 @@ const styles = {
     border: '1px solid gray'
   },
   myButton: {
-    backgroundColor: 'black',
-    color: 'white',
-    padding: '10px',
-    cursor: 'pointer'
+    backgroundImage: 'linear-gradient(to right,cyan, white)',
+    color: 'black',
+    padding: '12px',
+    cursor: 'pointer',
+    border: 'none',
+    fontSize: '16px',
+    borderRadius: '15px'
   }
 }
 
