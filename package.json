@@ -4,11 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "buildcss": "tailwindcss -i ./styles/tailwind.css -o ./styles/out/tailwind.css",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@nahidchowdhury/realjoi": "^0.0.4",
+    "@nahidchowdhury/realjoi": "^1.0.1",
     "@reduxjs/toolkit": "^1.7.1",
     "joi": "^17.5.0",
     "next": "12.0.7",
@@ -17,7 +18,10 @@
     "react-redux": "^7.2.6"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
   }
 }
