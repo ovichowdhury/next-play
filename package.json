@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "buildcss": "tailwindcss -i ./styles/tailwind.css -o ./styles/out/tailwind.css",
     "start": "next start",
     "lint": "next lint"
   },
