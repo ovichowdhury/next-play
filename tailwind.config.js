@@ -5,7 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+    },
   },
   plugins: [],
-  darkMode: 'media'
-}
+  darkMode: "media",
+};
