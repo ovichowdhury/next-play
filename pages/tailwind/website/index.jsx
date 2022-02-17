@@ -4,9 +4,9 @@ import Navbar from "../../../components/website/Navbar";
 
 export default function Index() {
   return (
-    <>
+    <div className="font-poppings">
       {/* Navbar of the website */}
       <Navbar></Navbar>
-    </>
+    </div>
   );
 }
