@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   return (
@@ -21,6 +22,9 @@ export default function Navbar() {
               Login
             </button>
           </ul>
+          <div className="flex flex-1 justify-end items-center sm:hidden">
+            <FontAwesomeIcon icon={["fas", "fa-bars"]} className="text-2xl" />
+          </div>
         </nav>
       </header>
     </>
