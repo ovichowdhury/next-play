@@ -1,7 +1,8 @@
 {
-    "css.validate": false,
-    "tailwindCSS.emmetCompletions": true,
-    "editor.quickSuggestions": {
-        "strings": true
-    }
+  "css.validate": false,
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "typescript.validate.enable": false
 }

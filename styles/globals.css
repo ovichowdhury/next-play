@@ -3,3 +3,25 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
+
+@layer components {
+  .btn {
+    @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+  }
+
+  .btn-purple {
+    @apply bg-bookmark-purple text-white;
+  }
+
+  .btn-grey {
+    @apply bg-bookmark-white;
+  }
+
+  .btn-purple:hover {
+    @apply bg-bookmark-white text-black;
+  }
+
+  .btn-grey:hover {
+    @apply bg-bookmark-purple text-white;
+  }
+}
