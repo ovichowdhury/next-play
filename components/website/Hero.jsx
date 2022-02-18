@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <>
@@ -17,7 +19,16 @@ export default function Hero() {
               <button className="btn btn-grey">Get it on Firefox</button>
             </div>
           </div>
-          <div className="flex flex-1">Image container</div>
+          <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+            <div>
+              <Image
+                src="/website/hero-bg.png"
+                alt="Hero Image"
+                height={300}
+                width={400}
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
