@@ -1,3 +1,4 @@
+import Feature from "@components/website/Feature";
 import Hero from "@components/website/Hero";
 import Navbar from "@components/website/Navbar";
 
@@ -10,6 +11,8 @@ export default function Index() {
       <Navbar></Navbar>
       {/* Hero section of the website */}
       <Hero></Hero>
+      {/* feature section */}
+      <Feature></Feature>
     </div>
   );
 }

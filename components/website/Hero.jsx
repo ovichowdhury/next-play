@@ -30,6 +30,8 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        {/*Rounded rectangle for design*/}
+        <div className="hidden md:block h-60 w-2/4 absolute overflow-hidden bg-bookmark-purple rounded-l-full  top-32 right-0 -z-10"></div>
       </section>
     </>
   );

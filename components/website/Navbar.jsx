@@ -13,7 +13,7 @@ export default function Navbar() {
             <Image
               src="/website/logo-bookmark.svg"
               alt="logo"
-              width="150px"
+              width="250px"
               height="50px"
             />
           </div>
@@ -42,9 +42,15 @@ export default function Navbar() {
               "text-center": true,
             })}
           >
-            <li className="cursor-pointer p-2 sm:p-0">Features</li>
-            <li className="cursor-pointer p-2 sm:p-0">Pricing</li>
-            <li className="cursor-pointer p-2 sm:p-0">Contact</li>
+            <li className="cursor-pointer p-2 sm:p-0 hover:text-bookmark-purple">
+              Features
+            </li>
+            <li className="cursor-pointer p-2 sm:p-0 hover:text-bookmark-purple">
+              Pricing
+            </li>
+            <li className="cursor-pointer p-2 sm:p-0 hover:text-bookmark-purple">
+              Contact
+            </li>
             <button className="bg-bookmark-red text-white px-5 py-2 rounded-md uppercase">
               Login
             </button>
