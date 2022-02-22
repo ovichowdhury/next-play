@@ -1,3 +1,4 @@
+import ContactUs from "@components/website/ContactUs";
 import Download from "@components/website/Download";
 import FAQ from "@components/website/FAQ";
 import Feature from "@components/website/Feature";
@@ -19,6 +20,8 @@ export default function Index() {
       <Download></Download>
       {/* FAQ section */}
       <FAQ></FAQ>
+      {/* Contact us section */}
+      <ContactUs></ContactUs>
     </div>
   );
 }
