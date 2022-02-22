@@ -1,4 +1,5 @@
 import Download from "@components/website/Download";
+import FAQ from "@components/website/FAQ";
 import Feature from "@components/website/Feature";
 import Hero from "@components/website/Hero";
 import Navbar from "@components/website/Navbar";
@@ -16,6 +17,8 @@ export default function Index() {
       <Feature></Feature>
       {/* Download section */}
       <Download></Download>
+      {/* FAQ section */}
+      <FAQ></FAQ>
     </div>
   );
 }
