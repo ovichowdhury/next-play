@@ -7,7 +7,7 @@ export default function Navbar() {
   const [toggleHam, setToggleHam] = useState(true);
   return (
     <>
-      <header>
+      <header className="sticky top-0 z-20 bg-white rounded-b-2xl">
         <nav className="container flex flex-wrap items-center py-4 mt-4">
           <div className="py-1">
             <Image
@@ -51,7 +51,7 @@ export default function Navbar() {
             <li className="cursor-pointer p-2 sm:p-0 hover:text-bookmark-purple">
               Contact
             </li>
-            <button className="bg-bookmark-red text-white px-5 py-2 rounded-md uppercase">
+            <button className="bg-bookmark-red text-white px-5 py-2 rounded-md uppercase hover:bg-bookmark-grey active:bg-bookmark-blue">
               Login
             </button>
           </ul>
