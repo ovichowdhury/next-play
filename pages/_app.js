@@ -3,7 +3,12 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { config, library } from "@fortawesome/fontawesome-svg-core";
-import { faBars, faS, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faS,
+  faChevronDown,
+  faRightToBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   fab,
   faTwitter,
@@ -21,7 +26,8 @@ library.add(
   faTwitter,
   faFacebookSquare,
   faLinkedinIn,
-  faYoutube
+  faYoutube,
+  faRightToBracket
 );
 
 function MyApp({ Component, pageProps }) {
