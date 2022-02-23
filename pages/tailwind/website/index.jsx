@@ -2,6 +2,7 @@ import ContactUs from "@components/website/ContactUs";
 import Download from "@components/website/Download";
 import FAQ from "@components/website/FAQ";
 import Feature from "@components/website/Feature";
+import Footer from "@components/website/Footer";
 import Hero from "@components/website/Hero";
 import Navbar from "@components/website/Navbar";
 
@@ -22,6 +23,8 @@ export default function Index() {
       <FAQ></FAQ>
       {/* Contact us section */}
       <ContactUs></ContactUs>
+      {/* Footer section */}
+      <Footer></Footer>
     </div>
   );
 }
