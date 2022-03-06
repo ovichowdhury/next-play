@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import "animate.css";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
