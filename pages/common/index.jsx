@@ -1,3 +1,4 @@
+import GradButton from "@components/common/GradButton";
 import GradCard from "@components/common/GradCard";
 
 export default function Index() {
@@ -10,6 +11,9 @@ export default function Index() {
         <GradCard>
           <p>Card 2</p>
         </GradCard>
+      </div>
+      <div className="flex justify-center m-10">
+        <GradButton>Submit</GradButton>
       </div>
     </>
   );
