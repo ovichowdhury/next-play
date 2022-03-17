@@ -11,7 +11,7 @@ export default function Navbar() {
         <nav className="container flex flex-wrap items-center py-4 mt-2">
           <div className="py-1">
             <Image
-              src="/website/logo-bookmark.svg"
+              src="/website/logo.svg"
               alt="logo"
               width="250px"
               height="50px"

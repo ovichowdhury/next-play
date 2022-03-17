@@ -1,9 +1,11 @@
 import GradButton from "@components/common/GradButton";
 import GradCard from "@components/common/GradCard";
+import Navbar from "@components/common/navbar/Navbar";
 
 export default function Index() {
   return (
     <>
+      <Navbar></Navbar>
       <div className="flex gap-4 justify-center  flex-wrap mt-10">
         <GradCard>
           <p>Card 1</p>
