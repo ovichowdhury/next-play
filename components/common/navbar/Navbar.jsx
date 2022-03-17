@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Brand from "./Brand";
+import NavContainer from "./NavContainer";
 import Toggler from "./Toggler";
 
 export default function Navbar() {
@@ -8,11 +9,11 @@ export default function Navbar() {
   return (
     <>
       {/* navabr container */}
-      <div className="w-full text-gray-700 bg-white">
+      <div className="w-full text-gray-700 bg-white sticky top-0 z-20">
         {/* container for two section of navbar left and right */}
-        <div className="flex flex-col max-w-screen-lg px-4 mx-auto md:flex-row md:justify-between md:items-center md:px-6 lg:px-8">
+        <div className="flex flex-col px-2 md:flex-row md:justify-between md:items-center md:px-6 lg:px-8">
           {/* logo and toggler container */}
-          <div className="flex flex-row items-center justify-between p-4">
+          <div className="flex flex-row items-center justify-between py-4 px-1">
             {/* brand name and logo */}
             <Brand brandName="Property Land" />
             {/* toggle button */}
@@ -22,7 +23,7 @@ export default function Navbar() {
             />
           </div>
           {/* end logo and toggler container */}
-          <p>Hello</p>
+          <NavContainer navItemOpen={navItemOpen} />
         </div>
         {/* end container for two section of navbar left and right */}
       </div>
