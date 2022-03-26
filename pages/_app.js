@@ -17,6 +17,7 @@ import {
   faLinkedinIn,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { appWithTranslation } from "next-i18next";
 
 config.autoAddCss = false;
 library.add(
@@ -41,4 +42,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

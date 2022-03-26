@@ -1,0 +1,7 @@
+{
+  "welcome": "Welcome to Next.js App",
+  "greet": {
+    "first": "Hello",
+    "second": "Welcome"
+  }
+}
