@@ -18,7 +18,10 @@ export default function Download() {
         {/* Cards for download */}
         <div className="container grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 mt-16 max-w-screen-lg gap-16">
           {/* Card 1 */}
-          <div className="flex flex-col rounded-md shadow-md lg:mb-16">
+          <div
+            className="flex flex-col rounded-md shadow-md lg:mb-16"
+            data-aos="fade-right"
+          >
             {/* image section  */}
             <div className="flex flex-col items-center p-6">
               <Image
@@ -44,7 +47,10 @@ export default function Download() {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="flex flex-col rounded-md shadow-md lg:my-8">
+          <div
+            className="flex flex-col rounded-md shadow-md lg:my-8"
+            data-aos="zoom-in"
+          >
             {/* image section  */}
             <div className="flex flex-col items-center p-6">
               <Image
@@ -70,7 +76,10 @@ export default function Download() {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="flex flex-col rounded-md shadow-md lg:mt-16">
+          <div
+            className="flex flex-col rounded-md shadow-md lg:mt-16"
+            data-aos="fade-left"
+          >
             {/* image section  */}
             <div className="flex flex-col items-center p-6">
               <Image

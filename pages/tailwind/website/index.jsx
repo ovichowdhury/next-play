@@ -4,10 +4,17 @@ import FAQ from "@components/website/FAQ";
 import Feature from "@components/website/Feature";
 import Hero from "@components/website/Hero";
 import LandingLayout from "@components/website/LandingLayout";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 // https://youtu.be/00gyCtIQp8E
 
 export default function Index() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="font-poppings">
       <LandingLayout>
