@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-sdk": "^2.1116.0",
+    "mongoose": "^6.3.0",
     "next": "12.1.5",
+    "next-connect": "^0.12.2",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
