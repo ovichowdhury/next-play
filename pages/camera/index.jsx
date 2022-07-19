@@ -10,7 +10,7 @@ export default function Index() {
       </button>
       <br />
       <br />
-      {isOpen && <AiCamera />}
+      {isOpen && <AiCamera onImageCapture={(data) => console.log(data)} />}
     </div>
   );
 }

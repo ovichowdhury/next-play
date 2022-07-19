@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
 
 export default function AiCamera({
   modelUrl = "https://ovichowdhury.github.io/face-api-models/",
+  imgWidth = 320,
+  imgHeight = 240,
+  onImageCapture,
 }) {
   const stream = useRef(0);
+  const [img, setImg] = useState("");
 
   useEffect(() => {
     async function run() {
@@ -47,10 +51,10 @@ export default function AiCamera({
 
         if (result) {
           const canvas = document.getElementById("overlay");
-          const dims = faceapi.matchDimensions(canvas, videoEl, true);
+          // const dims = faceapi.matchDimensions(canvas, videoEl, true);
 
-          // const dims = { width: 500, height: 400 };
-          // canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+          const dims = { width: imgWidth, height: imgHeight };
+          canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
           faceapi.draw.drawDetections(
             canvas,
@@ -63,6 +67,20 @@ export default function AiCamera({
     } catch (ex) {
       console.log("[INFO] Detection stopped");
     }
+  };
+
+  const onCapture = () => {
+    console.log("in");
+    const video = document.getElementById("inputVideo");
+    const canvas = document.createElement("canvas");
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0, imgWidth, imgHeight);
+    const imageRaw = canvas.toDataURL("image/png");
+    const base64Image = imageRaw.split(",")[1];
+    setImg(imageRaw);
+    if (typeof onImageCapture === "function") onImageCapture(base64Image);
   };
 
   return (
@@ -99,12 +117,30 @@ export default function AiCamera({
             autoPlay
             muted
             playsInline
+            width={imgWidth}
+            height={imgHeight}
           ></video>
           <canvas
             id="overlay"
             style={{ position: "absolute", top: 0, left: 0 }}
+            width={imgWidth}
+            height={imgHeight}
           />
         </div>
+        <button
+          type="button"
+          style={{
+            padding: "15px 32px",
+            cursor: "pointer",
+            backgroundColor: "#4CAF50",
+            color: "#ffff",
+            marginTop: "15px",
+            zIndex: 999,
+          }}
+          onClick={onCapture}
+        >
+          Capture
+        </button>
       </div>
       <div style={{ padding: "20px" }}>
         <h3
@@ -117,7 +153,7 @@ export default function AiCamera({
         >
           Captured Image
         </h3>
-        <img src="" alt="Preview Image"></img>
+        <img src={img} alt="Preview Image" id="previewImage"></img>
       </div>
     </div>
   );
