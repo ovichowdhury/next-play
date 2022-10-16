@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
+import SideItem from "./SideItem";
+// import getIcon from "./icons";
 
-export default function Sidebar({ menus }) {
+export default function SidebarNested({ menus }) {
   const [open, setOpen] = useState(true);
   const toggleOpen = () => {
     setOpen(!open);
@@ -31,25 +33,18 @@ export default function Sidebar({ menus }) {
             className={`cursor-pointer duration-500`}
           />
           <h1
-            className={`text-black origin-left font-medium text-xl duration-300 uppercase ${
+            className={`text-gray-700 origin-left font-medium text-xl duration-300 uppercase ${
               !open && "scale-0"
             }`}
           >
-            Property
+            My Brand
           </h1>
         </div>
         {/** Menus */}
         <ul className="pt-6">
           {menus.map((menu, index) => (
-            <li
-              key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-slate-200 text-gray-600 text-md font-semibold items-center gap-x-4 
-              ${menu.gap ? "mt-9" : "mt-2"} `}
-            >
-              <img src={`/sidebar/${menu.src}.png`} alt="icon" />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {menu.title}
-              </span>
+            <li key={index} className={`${menu.gap ? "mt-9" : "mt-2"} `}>
+              <SideItem menu={menu} open={open} />
             </li>
           ))}
         </ul>
