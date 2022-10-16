@@ -1,15 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
+import SideDropdown from "./SideDropdown";
 import SideItem from "./SideItem";
 // import getIcon from "./icons";
 
-export default function SidebarNested({ menus }) {
+export default function SidebarNested({ menus, children }) {
   const [open, setOpen] = useState(true);
   const toggleOpen = () => {
     setOpen(!open);
   };
   return (
     <div className="flex">
+      {/** Sidebar section */}
       <div
         className={`relative h-screen bg-gray-200 ${
           open ? "w-64" : "w-20"
@@ -19,7 +21,7 @@ export default function SidebarNested({ menus }) {
         <img
           src="/sidebar/control.png"
           alt="Control"
-          className={`absolute cursor-pointer w-7 border-2 border-gray-200 -right-3 top-9 rounded-full ${
+          className={`absolute cursor-pointer w-7 border-2 border-blue-400 -right-3 top-9 rounded-full ${
             !open && "rotate-180"
           }`}
           onClick={toggleOpen}
@@ -44,13 +46,17 @@ export default function SidebarNested({ menus }) {
         <ul className="pt-6">
           {menus.map((menu, index) => (
             <li key={index} className={`${menu.gap ? "mt-9" : "mt-2"} `}>
-              <SideItem menu={menu} open={open} />
+              {menu.children ? (
+                <SideDropdown menu={menu} open={open} />
+              ) : (
+                <SideItem menu={menu} open={open} />
+              )}
             </li>
           ))}
         </ul>
       </div>
       {/** Right Panel */}
-      <div className="p-7 font-semibold text-2xl flex-1 h-screen">Homepage</div>
+      <div className="p-4">{children}</div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   AiOutlineBarChart,
   AiOutlineSetting,
   AiOutlineFile,
+  AiOutlineUsergroupAdd,
 } from "react-icons/ai";
 
 export default function getIcon(name) {
@@ -28,6 +29,8 @@ export default function getIcon(name) {
       return <AiOutlineSetting className="text-2xl" />;
     case "files":
       return <AiOutlineFile className="text-2xl" />;
+    case "user":
+      return <AiOutlineUsergroupAdd className="text-2xl" />;
     default:
       return <AiOutlineMenu className="text-2xl" />;
   }
