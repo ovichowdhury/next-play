@@ -3,7 +3,9 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
+    
     extend: {
       colors: {
         "bookmark-purple": "#5267DF",
@@ -14,7 +16,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      poppings: ["Poppings", "sans-serif"],
+      'poppins': ['Poppins', 'sans-serif'],
+      'axiforma': ['axiforma', 'sans-serif']
     },
     container: {
       center: true,
