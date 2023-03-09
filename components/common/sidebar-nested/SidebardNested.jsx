@@ -56,7 +56,7 @@ export default function SidebarNested({ menus, children }) {
         </ul>
       </div>
       {/** Right Panel */}
-      <div className="p-4">{children}</div>
+      <div className="p-4 flex-1 relative overflow-x-auto">{children}</div>
     </div>
   );
 }

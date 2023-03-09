@@ -2,10 +2,10 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite-react/**/*.js",
   ],
-  
+
   theme: {
-    
     extend: {
       colors: {
         "bookmark-purple": "#5267DF",
@@ -16,8 +16,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'poppins': ['Poppins', 'sans-serif'],
-      'axiforma': ['axiforma', 'sans-serif']
+      poppins: ["Poppins", "sans-serif"],
+      axiforma: ["axiforma", "sans-serif"],
     },
     container: {
       center: true,
@@ -29,6 +29,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
   darkMode: "media",
 };
