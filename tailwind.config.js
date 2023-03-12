@@ -3,6 +3,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/tailwind-datepicker-react/dist/**/*.js",
   ],
 
   theme: {
